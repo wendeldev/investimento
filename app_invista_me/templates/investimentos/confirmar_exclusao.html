@@ -1,0 +1,11 @@
+{% extends 'investimentos/base.html' %}
+{% block conteudo %}
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        <h1 style='text-align: center;'>confirmar exclusão de {{item.investimento}}</h1>
+        <button class='btn btn-default'><a href="{% url 'investimentos'%}">cancelar</a></button>
+        <button class='btn btn-danger' type="submit">confirmar</button>
+    </form>
+</div>
+{% endblock %}
